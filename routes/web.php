@@ -9,21 +9,21 @@ Route::get('/', function () {
 
 // coba bikin view baru dengan nama about
 Route::get('/about', function () {
-    return view('about');
+    return view('about', ['title' => 'About']);
 });
 
 Route::get('/', function () {
-    return view('home',['nama' => 'Hendrik Hermawan']);
+    return view('home',['title' => 'Home']);
 });
 
 // buat route baru dengan nama blog dan contact
 
-Route::get('/blog', function () {
-    return view('blog');
+Route::get('/projects', function () {
+    return view('projects', ['title' => 'Projects']);
 });
 
 Route::get('/contact', function () {
-    return view('contact');
+    return view('contact',['title' => 'Contact']);
 });
 
 

@@ -1,37 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-    <html class="h-full bg-gray-900">
-  <body class="h-full">
-    <title>Dashboard</title>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
-
-</head>
-
-<body>
-
-<div class="min-h-full">
-
-  <!-- navbar -->
-  <x-navbar></x-navbar>
-
-  <!-- header -->
-<x-header></x-header>
-  
-<main>
-    <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-      <!-- Your content -->
-      <h4 class="text-white">Welcome to my profile</h4>
-    </div>
-  </main>
-</div>
-
-</body>
-</html>
+<x-layout>
+    <!-- ambil data dari routes tiap halaman dengan variabel title untuk mengirim ke layout-->
+    <x-slot:title>{{$title}}</x-slot:title>
+  <h3 class="text-white">Ini adalah halaman about</h3>
+</x-layout>

@@ -23,12 +23,13 @@
   <x-navbar></x-navbar>
 
   <!-- header -->
-<x-header></x-header>
+  <!-- ambil variabel title dari routes lewat halaman home -->
+<x-header>{{$title}}</x-header>
   
 <main>
     <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-      <!-- Your content -->
-      <h4 class="text-white">Welcome to my profile</h4>
+    <!-- panggil setiap konten tiap halaman dengan menggunakan variabel $slot -->
+    {{$slot}} 
     </div>
   </main>
 </div>
