@@ -13,25 +13,15 @@
 
             <!-- buat aktif tiap buttom halaman -->
             <!-- pisah ke dalam komponen nav-link -->
-            <x-nav-link href="/">
-            </x-nav-link>
-            
-            <a href="/projects" class="{{ request()->is('projects') 
-        ? 'bg-gray-950/50 px-3 py-2 text-sm font-medium text-white' 
-        : 'text-gray-300 hover:bg-white/5 hover:text-white px-3 py-2 text-sm font-medium' 
-   }} rounded-md">
-              Projects
-            </a><a href="/about" class="{{ request()->is('about') 
-        ? 'bg-gray-950/50 px-3 py-2 text-sm font-medium text-white' 
-        : 'text-gray-300 hover:bg-white/5 hover:text-white px-3 py-2 text-sm font-medium' 
-   }} rounded-md">
-              About
-            </a><a href="/contact" class="{{ request()->is('contact') 
-        ? 'bg-gray-950/50 px-3 py-2 text-sm font-medium text-white' 
-        : 'text-gray-300 hover:bg-white/5 hover:text-white px-3 py-2 text-sm font-medium' 
-   }} rounded-md">
-              Contact
-            </a>
+            <!-- 1. home -->
+            <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
+            <!-- 2. projects -->
+            <x-nav-link href="projects" :active="request()->is('projects')">Projects</x-nav-link>
+            <!-- 3. about -->
+            <x-nav-link href="about" :active="request()->is('about')">About</x-nav-link>
+            <!-- 4. contact -->
+            <x-nav-link href="contact" :active="request()->is('contact')">Contact</x-nav-link>
+
           </div>
         </div>
       </div>
