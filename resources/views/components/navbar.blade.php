@@ -12,12 +12,10 @@
             <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
 
             <!-- buat aktif tiap buttom halaman -->
-            <a href="/" class="{{ request()->is('/') 
-        ? 'bg-gray-950/50 px-3 py-2 text-sm font-medium text-white' 
-        : 'text-gray-300 hover:bg-white/5 hover:text-white px-3 py-2 text-sm font-medium' 
-   }} rounded-md">
-              Home
-            </a>
+            <!-- pisah ke dalam komponen nav-link -->
+            <x-nav-link href="/">
+            </x-nav-link>
+            
             <a href="/projects" class="{{ request()->is('projects') 
         ? 'bg-gray-950/50 px-3 py-2 text-sm font-medium text-white' 
         : 'text-gray-300 hover:bg-white/5 hover:text-white px-3 py-2 text-sm font-medium' 
