@@ -9,7 +9,7 @@ Route::get('/', function () {
 
 // coba bikin view baru dengan nama about
 Route::get('/about', function () {
-    return view('about', ['title' => 'About']);
+    return view('about', ['title' => 'About', 'nama'=>'Hendrik Hermawan']);
 });
 
 Route::get('/', function () {
