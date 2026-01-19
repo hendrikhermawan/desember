@@ -1,5 +1,5 @@
 <!-- pindah bagian href ke dalam file navbar -->
-
+@props(['active' => false])
 <!-- gunakan variabel attributes untuk menerima atribute apapun dari link nav-link -->
 <a {{$attributes}} class="{{ $active 
         ? 'bg-gray-950/50 px-3 py-2 text-sm font-medium text-white' 
