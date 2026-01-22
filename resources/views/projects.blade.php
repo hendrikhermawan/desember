@@ -14,7 +14,7 @@
       <a href="#">{{$post['author']}}</a> | 1 januari 2025
     </div>
     <p class="my-4-font-light">
-      {{$post['body']}}
+      {{Str::limit($post['body'],50)}}
     </p>
     <a href="" class="font-medium text-blue-400 hover:underline">Read More &raquo;</a>
   </article>
