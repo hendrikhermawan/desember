@@ -19,7 +19,22 @@ Route::get('/', function () {
 // buat route baru dengan nama blog dan contact
 
 Route::get('/projects', function () {
-    return view('projects', ['title' => 'Projects']);
+    return view('projects', ['title' => 'Projects', 'posts' =>[
+        [
+            'title' => 'Project 1',
+            'author' => 'Hendrik Hermawan',
+            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Voluptatibus maiores asperiores ullam reprehenderit dignissimos dolore officiis voluptatum, 
+            cumque, quidem ipsam unde veritatis consequuntur modi nihil molestiae dolorum labore dolorem molestias!'
+        ],
+        [
+            'title' => 'Project 2',
+            'author' => 'Luka Modric',
+            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Voluptatibus maiores asperiores ullam reprehenderit dignissimos dolore officiis voluptatum, 
+            cumque, quidem ipsam unde veritatis consequuntur modi nihil molestiae dolorum labore dolorem molestias!'
+        ]
+    ]]);
 });
 
 Route::get('/contact', function () {

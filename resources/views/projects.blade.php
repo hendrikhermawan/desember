@@ -4,30 +4,22 @@
   <!-- <h3 class="text-white">Ini adalah halaman project</h3> -->
 
 
-<!-- buat artikel satu -->
-  <article class="py-8 max-w-screen-md border-b border-gray-300 text-amber-50 ">
-    <h2 class="mb-1 text-3xl tracking-tight font-bold">Judul Project 1</h2>
+<!-- buat artikel looping dari routes -->
+
+@foreach ($posts as $post)
+
+<article class="py-8 max-w-screen-md border-b border-gray-300 text-amber-50 ">
+    <h2 class="mb-1 text-3xl tracking-tight font-bold">{{$post['title']}}</h2>
     <div class="text-base text-gray-400">
-      <a href="#">Hendrik Hermawan</a> | 1 januari 2025
+      <a href="#">{{$post['author']}}</a> | 1 januari 2025
     </div>
     <p class="my-4-font-light">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus maiores asperiores ullam reprehenderit dignissimos dolore officiis voluptatum, cumque, quidem ipsam unde veritatis consequuntur modi nihil molestiae dolorum labore dolorem molestias!
+      {{$post['body']}}
     </p>
     <a href="" class="font-medium text-blue-400 hover:underline">Read More &raquo;</a>
   </article>
   
-  <!-- buat artikel dua -->
-  <article class="py-8 max-w-screen-md border-b border-gray-300 text-amber-50 ">
-    <h2 class="mb-1 text-3xl tracking-tight font-bold">Judul Project 2</h2>
-    <div class="text-base text-gray-400">
-      <a href="#">Hendrik Hermawan</a> | 2 januari 2025
-    </div>
-    <p class="my-4-font-light">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus maiores asperiores ullam reprehenderit dignissimos dolore officiis voluptatum, cumque, quidem ipsam unde veritatis consequuntur modi nihil molestiae dolorum labore dolorem molestias!
-    </p>
-    <a href="" class="font-medium text-blue-400 hover:underline">Read More &raquo;</a>
-  </article>
-  
+@endforeach
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
