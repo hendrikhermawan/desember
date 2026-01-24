@@ -11,7 +11,7 @@
 
   <article class="py-8 max-w-screen-md border-b border-gray-300 text-amber-50 ">
 
-    <a href="/posts/{{$post['id']}}">
+    <a href="/posts/{{$post['id']}}" class="no-underline hover:underline">
       <h2 class="mb-1 text-3xl tracking-tight font-bold">{{$post['title']}}</h2>
     </a>
 
@@ -21,7 +21,7 @@
     <p class="my-4-font-light">
       {{Str::limit($post['body'],50)}}
     </p>
-    <a href="/posts/{{'id'}}" class="font-medium text-blue-400 hover:underline">Read More &raquo;</a>
+    <a href="/posts/{{$post['id']}}" class="font-medium text-blue-400 hover:underline">Read More &raquo;</a>
   </article>
 
   @endforeach
