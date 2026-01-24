@@ -21,6 +21,7 @@ Route::get('/', function () {
 Route::get('/projects', function () {
     return view('projects', ['title' => 'Projects', 'posts' =>[
         [
+            'id' => 1,
             'title' => 'Project 1',
             'author' => 'Hendrik Hermawan',
             'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -28,8 +29,16 @@ Route::get('/projects', function () {
             cumque, quidem ipsam unde veritatis consequuntur modi nihil molestiae dolorum labore dolorem molestias!'
         ],
         [
+            'id' => 2,
             'title' => 'Project 2',
             'author' => 'Luka Modric',
+            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Voluptatibus maiores asperiores ullam reprehenderit dignissimos dolore officiis voluptatum, 
+            cumque, quidem ipsam unde veritatis consequuntur modi nihil molestiae dolorum labore dolorem molestias!'
+        ],
+        [
+            'title' => 'Project 3',
+            'author' => 'sergio ramos',
             'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Voluptatibus maiores asperiores ullam reprehenderit dignissimos dolore officiis voluptatum, 
             cumque, quidem ipsam unde veritatis consequuntur modi nihil molestiae dolorum labore dolorem molestias!'

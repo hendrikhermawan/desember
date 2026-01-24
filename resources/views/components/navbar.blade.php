@@ -67,7 +67,7 @@
     </div>
   </div>
 
-  <el-disclosure id="mobile-menu" hidden class="block md:hidden">
+<el-disclosure id="mobile-menu" hidden class="block md:hidden">
     <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
       <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
 <!-- buat aktif tiap buttom halaman -->
@@ -106,3 +106,4 @@
     </div>
   </el-disclosure>
 </nav>
+
