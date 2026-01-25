@@ -19,13 +19,13 @@
       <a href="#">{{$post['author']}}</a> | 1 januari 2025
     </div>
     <p class="my-4-font-light">
-      {{Str::limit($post['body'],50)}}
+      {{Str::limit($post['body'],100)}}
     </p>
     <a href="/posts/{{$post['id']}}" class="font-medium text-blue-400 hover:underline">Read More &raquo;</a>
   </article>
 
   @endforeach
-
+{{-- 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
     <!-- Card Project -->
@@ -67,7 +67,7 @@
       </div>
     </div>
 
-  </div>
+  </div> --}}
 
 
 </x-layout>
