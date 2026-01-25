@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -9,17 +10,17 @@ Route::get('/', function () {
 
 // coba bikin view baru dengan nama about
 Route::get('/about', function () {
-    return view('about', ['title' => 'About', 'nama'=>'Hendrik Hermawan']);
+    return view('about', ['title' => 'About', 'nama' => 'Hendrik Hermawan']);
 });
 
 Route::get('/', function () {
-    return view('home',['title' => 'Home']);
+    return view('home', ['title' => 'Home']);
 });
 
 // buat route baru dengan nama blog dan contact
 
 Route::get('/projects', function () {
-    return view('projects', ['title' => 'Projects', 'posts' =>[
+    return view('projects', ['title' => 'Projects', 'posts' => [
         [
             'id' => 1,
             'title' => 'Project 1',
@@ -48,7 +49,7 @@ Route::get('/projects', function () {
 });
 
 Route::get('/contact', function () {
-    return view('contact',['title' => 'Contact']);
+    return view('contact', ['title' => 'Contact']);
 });
 
 // buat route untuk wild card id posts (lihat detail seperti show more dan detail)
@@ -81,6 +82,9 @@ Route::get('/posts/{id}', function ($id) {
         ]
     ];
 
+    // cari id posts 
+    $post = Arr::first($posts, function ($post) use ($id) {
+        return $post['id'] == $id;
     });
-
-
+    return view('post', ['title' => 'Single Post', 'post' => $post]);
+});
