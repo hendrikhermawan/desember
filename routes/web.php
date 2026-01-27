@@ -34,9 +34,8 @@ Route::get('/contact', function () {
 
 Route::get('/posts/{id}', function ($id) {
 
-    // cari id posts menggunakan array helper laravel
-    $post = Arr::first(Post::all(), function ($post) use ($id) {
-        return $post['id'] == $id;
-    });
+    // 1. cari id posts menggunakan array helper laravel
+    // 2. panggil method find di class Post (pakai ini kita sekarang)
+    $post = Post::find($id);
     return view('post', ['title' => 'Single Post', 'post' => $post]);
 });
