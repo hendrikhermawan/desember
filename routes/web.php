@@ -50,10 +50,10 @@ Route::get('/', function () {
     return view('home', ['title' => 'Home']);
 });
 
-// buat route baru dengan nama blog dan contact
+// buat route baru dengan nama projects dan contact
 
 Route::get('/projects', function () {
-    return view('projects', ['title' => 'Projects', 'posts' => Post::all()]);
+    return view('projects', ['title' => 'Projects', 'posts' => Post::all()]); //tarik data dari class Post
 });
 Route::get('/contact', function () {
     return view('contact', ['title' => 'Contact']);
@@ -63,7 +63,7 @@ Route::get('/contact', function () {
 
 Route::get('/posts/{id}', function ($id) {
 
-    // cari id posts 
+    // cari id posts menggunakan array helper laravel
     $post = Arr::first(Post::all(), function ($post) use ($id) {
         return $post['id'] == $id;
     });
