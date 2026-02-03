@@ -38,7 +38,7 @@ class  Post
     }
 
     
-    public static function find($id)
+    public static function find($id): array
     {
 
         // return Arr::first(static::all(), function ($post) use ($id) {
@@ -46,8 +46,19 @@ class  Post
         // });
         
         // menggunakan arrow function
-        return Arr::first(static::all(), fn($post) => $post['id'] == $id);
-            return $post['id'] == $id;
+        // return Arr::first(static::all(), fn($post) => $post['id'] == $id);
+        //     return $post['id'] == $id;
+        
+        $post = Arr::first(static::all(), fn($post) => $post['id'] == $id);
+        
+        if($post) {
+            return $post;
+        } else {
+            abort(404);
+        };
+
+
+        
         
     }
 }
