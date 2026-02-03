@@ -27,7 +27,7 @@ Route::get('/projects', function () {
     return view('projects', ['title' => 'Projects', 'posts' => Post::all()]); //tarik data dari class Post
 });
 Route::get('/contact', function () {
-    return view('contact', ['title' => 'Contact']);
+    return view('contact', ['title' => 'Contact', 'nomor' => '087887300377']);
 });
 
 // buat route untuk wild card id posts (lihat detail seperti show more dan detail)

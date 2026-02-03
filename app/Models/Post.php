@@ -37,12 +37,17 @@ class  Post
         ];
     }
 
-
+    
     public static function find($id)
     {
 
-        return Arr::first(static::all(), function ($post) use ($id) {
+        // return Arr::first(static::all(), function ($post) use ($id) {
+        //     return $post['id'] == $id;
+        // });
+        
+        // menggunakan arrow function
+        return Arr::first(static::all(), fn($post) => $post['id'] == $id);
             return $post['id'] == $id;
-        });
+        
     }
 }
