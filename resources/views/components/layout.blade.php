@@ -23,7 +23,7 @@
   <x-navbar></x-navbar>
 
   <!-- header -->
-  <!-- ambil variabel title dari routes lewat halaman home -->
+  <!-- ambil variabel title dari routes lewat halaman tiap halaman -->
 <x-header>{{$title}}</x-header>
   
 <main>
