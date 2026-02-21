@@ -9,6 +9,9 @@ use Illuminate\Support\Arr;
 // menggunakan extends model untuk mengambil data dari db sqlite tanpa harus mengisi seluruh data array
 class  Post extends Model
 {
+    // 1. kita ganti nama tabel di dalam database dengan nama blog_posts 
+    // protected $table = 'blog_posts';
+    // protected $tabel = 'post_id';
     // // public static function all()
     // // {
     // //     return [
